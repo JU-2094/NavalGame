@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_dark"
+    android:background="#0B0B22"
+    android:alpha="0.9"
     tools:context="com.navalgame.Game"
     android:weightSum="4">
 
@@ -29,7 +30,7 @@
             android:alpha=".8"
             android:text="Comenzar Batalla"
             android:textColor="#85D6FF"
-            android:textSize="22sp"
+            android:textSize="16sp"
             />
     </LinearLayout>
     <LinearLayout
@@ -53,6 +54,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="A"
+                android:textColor="#fff"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -60,6 +62,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="B"
+                android:textColor="#fff"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -67,6 +70,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="C"
+                android:textColor="#fff"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -74,6 +78,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="D"
+                android:textColor="#fff"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -81,6 +86,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="E"
+                android:textColor="#fff"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -88,6 +94,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="F"
+                android:textColor="#fff"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -95,6 +102,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="G"
+                android:textColor="#fff"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -102,6 +110,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="H"
+                android:textColor="#fff"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -109,6 +118,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="I"
+                android:textColor="#fff"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -116,6 +126,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="J"
+                android:textColor="#fff"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -135,6 +146,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="1"
+                    android:textColor="#fff"
                     android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -142,6 +154,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="2"
+                    android:textColor="#fff"
                     android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -149,6 +162,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="3"
+                    android:textColor="#fff"
                     android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -156,6 +170,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="4"
+                    android:textColor="#fff"
                     android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -163,6 +178,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="5"
+                    android:textColor="#fff"
                     android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -170,6 +186,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="6"
+                    android:textColor="#fff"
                     android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -177,6 +194,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="7"
+                    android:textColor="#fff"
                     android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -184,6 +202,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="8"
+                    android:textColor="#fff"
                     android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -191,6 +210,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="9"
+                    android:textColor="#fff"
                     android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -198,6 +218,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="10"
+                    android:textColor="#fff"
                     android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -205,9 +226,18 @@
             </LinearLayout>
 
             <RelativeLayout
+                android:background="@drawable/view_back"
+                android:alpha="0.8"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
+                <com.navalgame.DrawLine
+                    android:id="@+id/grid_view"
+                    android:alpha="0.7"
+                    android:background="@drawable/view_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -216,6 +246,7 @@
                     android:layout_height="match_parent">
                     <ImageView
                         android:layout_weight="9"
+                        android:alpha="0.8"
                         android:id="@+id/larger_boat"
                         android:src="@drawable/long_boat"
                         android:layout_width="match_parent"
@@ -226,44 +257,118 @@
                         android:layout_height="match_parent" />
                 </LinearLayout>
 
-                <!--
-                <ImageView
-                    android:id="@+id/medium_boat"
-                    android:src="@drawable/fat_boat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <ImageView
-                    android:id="@+id/small_boat1"
-                    android:src="@drawable/medium_boat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <ImageView
-                    android:id="@+id/small_boat2"
-                    android:src="@drawable/medium_boat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <ImageView
-                    android:id="@+id/unit_boat1"
-                    android:src="@drawable/small_boat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <ImageView
-                    android:id="@+id/unit_boat2"
-                    android:src="@drawable/small_boat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <ImageView
-                    android:id="@+id/unit_boat3"
-                    android:src="@drawable/small_boat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                -->
-                <com.navalgame.DrawLine
-                    android:id="@+id/grid_view"
-                    android:alpha="0.5"
-                    android:background="@drawable/view_back"
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="10"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_weight="9"
+                        android:alpha="0.8"
+                        android:id="@+id/medium_boat"
+                        android:src="@drawable/fat_boat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <Space
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_weight="9"
+                        android:alpha="0.8"
+                        android:id="@+id/small_boat1"
+                        android:src="@drawable/medium_boat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <Space
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_weight="9"
+                        android:alpha="0.8"
+                        android:id="@+id/small_boat2"
+                        android:src="@drawable/medium_boat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <Space
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_weight="9"
+                        android:alpha="0.8"
+                        android:id="@+id/unit_boat1"
+                        android:src="@drawable/small_boat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <Space
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_weight="9"
+                        android:alpha="0.8"
+                        android:id="@+id/unit_boat2"
+                        android:src="@drawable/small_boat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <Space
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_weight="9"
+                        android:alpha="0.8"
+                        android:id="@+id/unit_boat3"
+                        android:src="@drawable/small_boat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <Space
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+
             </RelativeLayout>
 
         </LinearLayout>

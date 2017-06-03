@@ -15,6 +15,7 @@ import android.view.View;
 public class DrawLine extends View {
 
     Paint paint;
+    final int CONST_GRID = 10;
 
     public DrawLine(Context context, AttributeSet attrs) {
         super(context,attrs);
@@ -24,16 +25,17 @@ public class DrawLine extends View {
     @Override
     public void onDraw(Canvas canvas) {
 
-        Log.e("SIZE GRID","Width "+getWidth());
-        Log.e("SIZE GRID","Height "+getHeight());
+        Log.e("SIZE","Width "+getWidth());
+        Log.e("SIZE","Height "+getHeight());
+
 
         paint.setColor(Color.CYAN);
         paint.setAlpha(125);
         paint.setStrokeWidth(5f);
         paint.setFlags(Paint.ANTI_ALIAS_FLAG);
 
-        int dx = getWidth()/10;
-        int dy = getHeight()/10;
+        int dx = getWidth()/CONST_GRID;
+        int dy = getHeight()/CONST_GRID;
 
         for(int drawX=0;drawX<getWidth();drawX+=dx){
             canvas.drawLine(drawX,0,drawX,getHeight(),paint);
