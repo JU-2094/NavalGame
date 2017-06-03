@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     >
 
-    <item android:drawable="@color/colorAccent"/>
+    <item android:drawable="@color/colorNaval"/>
 
-    <item>
+    <!--<item>
         <bitmap
 
             android:gravity="center"
             android:src="@mipmap/ic_launcher"/>
-    </item>
+    </item>-->
 
 </layer-list>
