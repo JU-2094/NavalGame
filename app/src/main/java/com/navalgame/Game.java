@@ -30,8 +30,6 @@ public class Game extends AppCompatActivity {
         btnBegin = (Button) findViewById(R.id.btn_begin);
 
         boatL = (ImageView)findViewById(R.id.larger_boat);
-
-        boatL = (ImageView)findViewById(R.id.larger_boat);
         boatM = (ImageView)findViewById(R.id.medium_boat);
         boatS1 = (ImageView)findViewById(R.id.small_boat1);
         boatS2 = (ImageView)findViewById(R.id.small_boat2);
@@ -97,7 +95,6 @@ public class Game extends AppCompatActivity {
                             v.setRotation(v.getRotation()+90);
                     }
                     processView(v);
-                    adjust(v);
                     break;
 
                 case MotionEvent.ACTION_MOVE:
@@ -113,8 +110,8 @@ public class Game extends AppCompatActivity {
                                 .start();
 
                     }else{
-                        v.setX(0);
-                        v.setY(0);
+//                        v.setX(0);
+//                        v.setY(0);
                     }
 
                     break;
@@ -283,3 +280,4 @@ public class Game extends AppCompatActivity {
         }
     }
 }
+
