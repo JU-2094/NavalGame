@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
 public class MainMenu extends Activity {
@@ -19,11 +21,20 @@ public class MainMenu extends Activity {
 
 
 
+
+
+
         play = (Button)findViewById(R.id.btn_play);
         config = (Button)findViewById(R.id.btn_config);
         exit = (Button)findViewById(R.id.btn_exit);
 
         mp = MediaPlayer.create(this,R.raw.snapper);
+        Animation escalar  = AnimationUtils.loadAnimation(MainMenu.this, R.anim.trasladar);
+        escalar.reset();
+
+        play.startAnimation(escalar);
+        config.startAnimation(escalar);
+        exit.startAnimation(escalar);
 
         play.setOnClickListener(new View.OnClickListener() {
             @Override

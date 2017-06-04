@@ -1,6 +1,7 @@
 package com.navalgame;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +18,7 @@ public class Game extends Activity {
     View gridView;
     Button btnBegin;
     ImageView boatL,boatM,boatS1,boatS2,boatU1,boatU2,boatU3;
+    MediaPlayer mp;
 
     final int CONST_GRID = 10;
 
@@ -29,6 +31,7 @@ public class Game extends Activity {
 
         gridView = findViewById(R.id.grid_view);
         btnBegin = (Button) findViewById(R.id.btn_begin);
+        mp = MediaPlayer.create(this,R.raw.snapper);
 
         boatL = (ImageView)findViewById(R.id.larger_boat);
         boatM = (ImageView)findViewById(R.id.medium_boat);
@@ -58,6 +61,13 @@ public class Game extends Activity {
 
         boatU3.setTag("boatU");
         boatU3.setOnTouchListener(new ListenerOnTouch());
+
+        btnBegin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mp.start();
+            }
+        });
 
 
         YoYo.with(Techniques.FadeIn)

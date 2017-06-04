@@ -248,6 +248,7 @@
                         android:layout_weight="9"
                         android:alpha="0.8"
                         android:id="@+id/larger_boat"
+                        android:visibility="visible"
                         android:src="@drawable/long_boat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
@@ -339,7 +340,7 @@
                     android:orientation="horizontal"
                     android:weightSum="10"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent">
                     <ImageView
                         android:layout_weight="9"
                         android:alpha="0.8"
