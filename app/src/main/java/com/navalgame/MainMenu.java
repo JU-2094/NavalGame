@@ -30,9 +30,9 @@ public class MainMenu extends Activity {
             public void onClick(View view) {
 
                 mp.start();
-                /*
+
                 Intent play = new Intent(MainMenu.this,Game.class);
-                startActivity(play);*/
+                startActivity(play);
             }
         });
 

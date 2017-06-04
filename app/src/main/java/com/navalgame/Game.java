@@ -1,5 +1,6 @@
 package com.navalgame;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,7 +12,7 @@ import android.widget.ImageView;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 
-public class Game extends AppCompatActivity {
+public class Game extends Activity {
 
     View gridView;
     Button btnBegin;
