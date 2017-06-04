@@ -85,6 +85,8 @@ public class Game extends Activity {
         float dx,dy;
         boolean isclick;
 
+
+
         @Override
         public boolean onTouch(View v, MotionEvent event) {
 
@@ -94,6 +96,7 @@ public class Game extends Activity {
                     dx = v.getX() - event.getRawX();
                     dy = v.getY() - event.getRawY();
 
+                    Log.e("----","--------------");
                     Log.e("POSITION X,Y, dx, dy",v.getX()+","+v.getY()+","+dx+","+dy);
                     Log.e("Rotation",v.getRotation()+"");
 
@@ -105,35 +108,31 @@ public class Game extends Activity {
                         else
                             v.setRotation(v.getRotation()+90);
                     }
-                    processView(v);
+                    v.animate()
+                            .x(v.getX())
+                            .y(getposition(v.getY(),1,v.getTag().toString()))
+                            .setDuration(0)
+                            .start();
+                    adjust(v,event.getRawX()+dx,event.getRawY()+dy);
                     break;
 
                 case MotionEvent.ACTION_MOVE:
                     isclick=false;
 
-
-                    if( processView(v) && onRange(event.getRawX() + dx,event.getRawY() + dy)) {
-
-                        v.animate()
-                                .x(getposition(event.getRawX() + dx, 0))
-                                .y(getposition(event.getRawY() + dy, 1))
-                                .setDuration(0)
-                                .start();
-
-                    }else{
-//                        v.setX(0);
-//                        v.setY(0);
-                    }
+                    v.animate()
+                            .x(getposition(event.getRawX()+dx,0,v.getTag().toString()))
+                            .y(event.getRawY()+dy)
+                            .setDuration(0)
+                            .start();
 
                     break;
                 default:
                     return false;
             }
-            processView(v);
             return true;
         }
 
-        private float getposition(float val,int type){
+        private float getposition(float val,int type,String tag){
 
             float res=0;
 
@@ -143,16 +142,80 @@ public class Game extends Activity {
             switch (type){
                 case 0:
                     int indexX = (int) ((val+xUnit*0.4)/xUnit);
+                    if (indexX>9)
+                        indexX=9;
+                    if (indexX<0)
+                        indexX=0;
                     res = indexX*xUnit;
                     break;
 
                 case 1:
-                    int indexY = (int) ((Math.abs(val) + yUnit*0.4)/yUnit);
-                    if(val<0){
-                        res = -indexY*yUnit - yUnit;
-                    }else{
-                        res = indexY*yUnit + yUnit;
+                    int indexY;
+
+                    switch (tag){
+                        case "boatL":
+
+                            yUnit = -0.25f*yUnit;
+                            indexY = (int) ((val + yUnit*0.4)/yUnit);
+
+                            indexY = ((4/3)*indexY +1);
+
+                            if(indexY>9)
+                                indexY = 9;
+
+                            if(indexY<-27)
+                                indexY=-27;
+
+                            int set,nearest=-1,setNearest=indexY,calc;
+                            for(set=9;set>=-27;set-=4){
+                                calc = Math.abs(set-indexY);
+                                if(nearest==-1){
+                                    nearest = calc;
+                                    setNearest = set;
+                                }else if(calc<nearest){
+                                    nearest = calc;
+                                    setNearest = set;
+                                }
+                            }
+                            indexY = setNearest;
+
+                            break;
+
+                        case "boatM":
+                            yUnit = 0.5f*yUnit;
+                            indexY = (int) ((val)/(yUnit*0.3f));
+
+                            indexY = (indexY/3);
+                            if((indexY&1)==0)
+                                indexY++;
+
+                            if(indexY<-5)
+                                indexY=-5;
+                            if(indexY>13)
+                                indexY=13;
+                            break;
+                        case "boatS":
+                            yUnit = 0.5f*yUnit;
+                            indexY = (int) ((val + yUnit*0.4)/yUnit);
+                            if (indexY<=0)
+                                indexY = -1;
+                            else if((indexY&1)==0)
+                                indexY --;
+
+                            if(indexY>17)
+                                indexY=17;
+
+                            break;
+                        default:
+                            indexY = (int) ((Math.abs(val) + yUnit*0.4)/yUnit);
+                            if (indexY<0)
+                                indexY = 0;
+                            if (indexY>9)
+                                indexY = 9;
+
                     }
+
+                    res = indexY*yUnit;
 
                     break;
             }
@@ -161,134 +224,69 @@ public class Game extends Activity {
             return res;
         }
 
-        private boolean onRange(float x,float y){
-            float boundYtop = (gridView.getHeight() - gridView.getHeight()/CONST_GRID)/2;
-            float boundYbottom = -boundYtop;
-            float boundX = gridView.getWidth() - gridView.getWidth()/CONST_GRID;
 
-            return (x>0 && x<boundX) && (y<boundYtop && y>boundYbottom);
-
-        }
-
-        private void adjust(View v){
-            float xUnit = gridView.getWidth()/CONST_GRID;
-            float yUnit = gridView.getHeight()/CONST_GRID;
-
-            int indexX = (int) ((v.getX()+xUnit*0.4)/xUnit);
-            int indexY = (int) ((Math.abs(v.getY()) + yUnit*0.4)/yUnit);
-
-            float movX = indexX*xUnit;
-            float movY;
-
-            if(v.getY()<0){
-                movY = -indexY*yUnit - yUnit/2;
-            }else{
-                movY = indexY*yUnit + yUnit/2;
-            }
-
-            v.setX(movX);
-            v.setY(movY);
-        }
-
-        private boolean processView(View v){
-            boolean ret;
-            int cond = 0;
-            String tag = v.getTag().toString();
-            float moveX = v.getX();
-            float moveY = v.getY();
+        private void adjust(View v,float rawX,float rawY){
             float rot = v.getRotation();
-
             float xUnit = gridView.getWidth()/CONST_GRID;
             float yUnit = gridView.getHeight()/CONST_GRID;
-            float xtraX = 0;
-            float xtraY = 0;
+            float adjustX=v.getX(),adjustY=v.getY();
+            String tag = v.getTag().toString();
 
-            int boundX = gridView.getWidth() - gridView.getWidth()/CONST_GRID;
-            int boundYtop = (gridView.getHeight() - gridView.getHeight()/CONST_GRID)/2;
-            int boundYbottom = -boundYtop;
+            boolean isY = !((rot==90) || (rot==270));
 
             switch (tag){
                 case "boatL":
 
-                    if(rot==90 || rot==270) {
-                        xtraX = 2 * xUnit;
-                        xtraX = (xtraX - (xtraX*0.2f));
+                    int index;
+
+                    if(isY){
+                        yUnit = -0.25f*yUnit;
+                        index =(int) (v.getY()/yUnit);
+                        Log.e("INDEX",index+"");
+                        if(index==9) {
+                            adjustY -= 5*yUnit;
+                        }else if(index==-27){
+                            adjustY += 5*yUnit;
+                        }
                     }else{
-                        xtraY = 2 * yUnit;
-                        xtraY = (xtraY - (xtraY*0.2f));
+                        index = (int) (v.getX()/xUnit);
+                        if(index==0)
+                            adjustX += xUnit;
+                        else if(index==9)
+                            adjustX -= xUnit;
                     }
                     break;
+
                 case "boatM":
-                    if(rot==90 || rot==270) {
-                        xtraX = 1.5f * xUnit;
-                        xtraX = (xtraX - (xtraX*0.2f));
+                    if(isY){
+                        yUnit = 0.5f*yUnit;
+                        index =(int) (v.getY()/yUnit);
+                        if(index==-5){
+                            adjustY -= yUnit;
+                        }else if(index==13)
+                            adjustY += yUnit;
                     }else{
-                        xtraY = 1.5f * yUnit;
-                        xtraY = (xtraY - (xtraY*0.2f));
+                        index = (int) (v.getX()/xUnit);
+                        if(index==0)
+                            adjustX += xUnit;
+                        else if(index==9)
+                            adjustX -= xUnit;
                     }
                     break;
+
                 case "boatS":
-                    if(rot==90 || rot==270) {
-                        xtraX = xUnit;
-                        xtraX = (xtraX - (xtraX*0.2f));
-                    }else{
-                        xtraY = yUnit;
-                        xtraY = (xtraY - (xtraY*0.2f));
-                    }
                     break;
-                case "boatU":
-                    if(rot==90 || rot==270) {
-                        xtraX = 0.5f * xUnit;
-                        xtraX = (xtraX - (xtraX*0.2f));
-                    }else{
-                        xtraY = 0.5f * yUnit;
-                        xtraY = (xtraY - (xtraY*0.2f));
-                    }
-                    break;
-                default:
-
             }
 
-            ret = !((moveX-xtraX)<0 || (moveX+xtraX)>boundX
-                    || (moveY-xtraY)<boundYbottom || (moveY+xtraY)>boundYtop);
 
-            if(!ret) {
-                if((moveX-xtraX)<0)
-                    cond = 0;
-                if((moveX+xtraX)>boundX)
-                    cond = 1;
-                if((moveY-xtraY)<boundYbottom)
-                    cond = 2;
-                if((moveY+xtraY)>boundYtop)
-                    cond = 3;
-                restoreValues(v, xUnit, yUnit,cond);
+            v.animate()
+                    .x(adjustX)
+                    .y(adjustY)
+                    .setDuration(0)
+                    .start();
 
-            }
-            adjust(v);
-            return ret;
         }
 
-        private void restoreValues(View v,float xUnit,float yUnit, int cond){
-
-            xUnit = xUnit*0.1f;
-            yUnit = yUnit*0.65f;
-
-            switch (cond){
-                case 0:
-                    v.setX(v.getX() + xUnit);
-                    break;
-                case 1:
-                    v.setX(v.getX()-2-xUnit);
-                    break;
-                case 2:
-                    v.setY(v.getY()+2+yUnit);
-                    break;
-                case 3:
-                    v.setY(v.getY()-2-yUnit);
-                    break;
-            }
-            processView(v);
-        }
     }
 }
 

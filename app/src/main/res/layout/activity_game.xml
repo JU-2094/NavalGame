@@ -226,6 +226,7 @@
             </LinearLayout>
 
             <RelativeLayout
+                android:id="@+id/viewgroup_grid"
                 android:background="@drawable/view_back"
                 android:alpha="0.8"
                 android:layout_weight="1"
@@ -248,10 +249,10 @@
                         android:layout_weight="9"
                         android:alpha="0.8"
                         android:id="@+id/larger_boat"
-                        android:visibility="visible"
                         android:src="@drawable/long_boat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
+
                     <Space
                         android:layout_weight="1"
                         android:layout_width="match_parent"
@@ -266,7 +267,6 @@
                     <ImageView
                         android:layout_weight="9"
                         android:alpha="0.8"
-                        android:visibility="gone"
                         android:id="@+id/medium_boat"
                         android:src="@drawable/fat_boat"
                         android:layout_width="match_parent"
@@ -286,7 +286,6 @@
                     <ImageView
                         android:layout_weight="9"
                         android:alpha="0.8"
-                        android:visibility="gone"
                         android:id="@+id/small_boat1"
                         android:src="@drawable/medium_boat"
                         android:layout_width="match_parent"
@@ -306,7 +305,6 @@
                     <ImageView
                         android:layout_weight="9"
                         android:alpha="0.8"
-                        android:visibility="gone"
                         android:id="@+id/small_boat2"
                         android:src="@drawable/medium_boat"
                         android:layout_width="match_parent"
@@ -325,7 +323,6 @@
                     <ImageView
                         android:layout_weight="9"
                         android:alpha="0.8"
-                        android:visibility="gone"
                         android:id="@+id/unit_boat1"
                         android:src="@drawable/small_boat"
                         android:layout_width="match_parent"
@@ -340,11 +337,10 @@
                     android:orientation="horizontal"
                     android:weightSum="10"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content">
                     <ImageView
                         android:layout_weight="9"
                         android:alpha="0.8"
-                        android:visibility="gone"
                         android:id="@+id/unit_boat2"
                         android:src="@drawable/small_boat"
                         android:layout_width="match_parent"
@@ -364,7 +360,6 @@
                     <ImageView
                         android:layout_weight="9"
                         android:alpha="0.8"
-                        android:visibility="gone"
                         android:id="@+id/unit_boat3"
                         android:src="@drawable/small_boat"
                         android:layout_width="match_parent"
@@ -374,6 +369,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
                 </LinearLayout>
+
 
             </RelativeLayout>
 
