@@ -344,11 +344,13 @@
                         android:id="@+id/unit_boat2"
                         android:src="@drawable/small_boat"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="wrap_content" />
+
                     <Space
                         android:layout_weight="1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="425dp"
+                        />
                 </LinearLayout>
 
 

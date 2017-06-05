@@ -1,6 +1,7 @@
 package com.navalgame;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
@@ -66,6 +68,10 @@ public class Game extends Activity {
             @Override
             public void onClick(View view) {
                 mp.start();
+                Intent playgame = new Intent(Game.this,LinkDevice.class);
+                startActivity(playgame);
+
+
             }
         });
 
