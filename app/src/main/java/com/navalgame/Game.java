@@ -23,6 +23,9 @@ import android.widget.Toast;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static com.navalgame.BluetoothUtil.MESSAGE_READ;
 import static com.navalgame.BluetoothUtil.MESSAGE_WRITE;
 
@@ -42,13 +45,14 @@ public class Game extends Activity {
 
     int [] p_boatL,p_boatM,p_boatS1,p_boatS2,p_boatU1,p_boatU2,p_boatU3;
 
+    Map<Integer,Integer> mapL,mapM,mapS;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_game);
-
 
         gridView = findViewById(R.id.grid_view);
         btnBegin = (Button) findViewById(R.id.btn_begin);
@@ -69,6 +73,13 @@ public class Game extends Activity {
         p_boatU1 = new int[2];
         p_boatU2 = new int[2];
         p_boatU3 = new int[2];
+
+        mapL = new HashMap<Integer, Integer>();
+        mapM = new HashMap<Integer, Integer>();
+        mapS = new HashMap<Integer, Integer>();
+
+        initMap();
+
 
         boatL.setTag("boatL");
         boatL.setOnTouchListener(new ListenerOnTouch());
@@ -148,6 +159,27 @@ public class Game extends Activity {
                 .duration(2000)
                 .playOn(btnBegin);
 
+    }
+
+    private void initMap(){
+        int j=0;
+        for(int i=9;i>=-27;i-=4){
+            mapL.put(i,j);
+            j++;
+        }
+        j=0;
+
+        for(int i=-5;i<=13;i+=2){
+            mapM.put(i,j);
+            j++;
+        }
+
+        mapS.put(-1,0);
+        j=1;
+        for(int i=1;i<=17;i+=2) {
+            mapS.put(i, j);
+            j++;
+        }
     }
 
     private void sendMessage(String message) {
@@ -377,9 +409,9 @@ public class Game extends Activity {
                                 indexY=17;
 
                             if(v.equals(findViewById(R.id.small_boat1))){
-                                p_boatS1[1]=indexY;
+                                p_boatS1[1]=mapS.get(indexY);
                             }else if(v.equals(findViewById(R.id.small_boat2))){
-                                p_boatS2[1]=indexY;
+                                p_boatS2[1]=mapS.get(indexY);
                             }
 
 
@@ -435,7 +467,7 @@ public class Game extends Activity {
                             adjustY += 5*yUnit;
                         }
 
-                        p_boatL[1] = index;
+                        p_boatL[1] = mapL.get(index);
                     }else{
                         index = (int) (v.getX()/xUnit);
                         if(index==0)
@@ -456,7 +488,7 @@ public class Game extends Activity {
                         }else if(index==13)
                             adjustY += yUnit;
 
-                        p_boatM[1] = index;
+                        p_boatM[1] = mapM.get(index);
                     }else{
                         index = (int) (v.getX()/xUnit);
                         if(index==0)
