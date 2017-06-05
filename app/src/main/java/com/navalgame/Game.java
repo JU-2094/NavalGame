@@ -265,6 +265,14 @@ public class Game extends Activity {
             intent.putExtra("boatU2",p_boatU2);
             intent.putExtra("boatU3",p_boatU3);
 
+            intent.putExtra("rboatL",boatL.getRotation());
+            intent.putExtra("rboatM",boatM.getRotation());
+            intent.putExtra("rboatS1",boatS1.getRotation());
+            intent.putExtra("rboatS2",boatS2.getRotation());
+            intent.putExtra("rboatU1",boatU1.getRotation());
+            intent.putExtra("rboatU2",boatU2.getRotation());
+            intent.putExtra("rboatU3",boatU3.getRotation());
+
             startActivity(intent);
         }
 
