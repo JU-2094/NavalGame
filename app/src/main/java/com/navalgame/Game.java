@@ -1,19 +1,28 @@
 package com.navalgame;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.bluetooth.BluetoothAdapter;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+
+import static com.navalgame.BluetoothUtil.MESSAGE_READ;
+import static com.navalgame.BluetoothUtil.MESSAGE_WRITE;
 
 public class Game extends Activity {
 
@@ -23,6 +32,11 @@ public class Game extends Activity {
     MediaPlayer mp;
 
     final int CONST_GRID = 10;
+
+    private StringBuffer mOutStringBuffer;
+    private BluetoothUtil bluetoothManager;
+    private BluetoothAdapter mBluetoothAdapter = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,12 +78,50 @@ public class Game extends Activity {
         boatU3.setTag("boatU");
         boatU3.setOnTouchListener(new ListenerOnTouch());
 
+
+        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        mOutStringBuffer = new StringBuffer("");
+        bluetoothManager = new BluetoothUtil(mHandler);
+
+
         btnBegin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mp.start();
-                Intent playgame = new Intent(Game.this,LinkDevice.class);
-                startActivity(playgame);
+                bluetoothManager.enableBluetooth();
+
+                final ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                        Game.this,android.R.layout.select_dialog_singlechoice
+                );
+
+                for(String name : bluetoothManager.getPaired())
+                    adapter.add(name);
+
+                AlertDialog.Builder dialog = new AlertDialog.Builder(Game.this);
+                dialog.setTitle("Selecciona el dispositivo");
+
+
+                dialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.setAdapter(adapter, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String devName = adapter.getItem(which);
+
+                        Log.e("SELECT",devName);
+
+                        bluetoothManager.connect(bluetoothManager.getDevice(devName));
+
+
+                    }
+                });
+
+                dialog.show();
 
 
             }
@@ -85,7 +137,49 @@ public class Game extends Activity {
 
     }
 
+    private void sendMessage(String message) {
+        // Check that we're actually connected before trying anything
+        if (bluetoothManager.getState() != BluetoothUtil.STATE_CONNECTED) {
+            Toast.makeText(this, "not connected", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        // Check that there's actually something to send
+        if (message.length() > 0) {
+            // Get the message bytes and tell the BluetoothChatService to write
+            byte[] send = message.getBytes();
+            bluetoothManager.write(send);
+            // Reset out string buffer to zero and clear the edit text field
+            mOutStringBuffer.setLength(0);
 
+            Log.e("ENVIADO",mOutStringBuffer.toString());
+
+        }
+    }
+
+    // The Handler that gets information back from the BluetoothChatService
+    private final Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            /**
+             * See the messages... not done 'cause time
+             */
+            switch (msg.what) {
+                case MESSAGE_WRITE:
+                    byte[] writeBuf = (byte[]) msg.obj;
+                    // construct a string from the buffer
+                    String writeMessage = new String(writeBuf);
+                    Log.e("Handler", "Write: " + writeMessage);
+                    break;
+
+                case MESSAGE_READ:
+                    byte[] readBuf = (byte[]) msg.obj;
+                    // construct a string from the valid bytes in the buffer
+                    String readMessage = new String(readBuf, 0, msg.arg1);
+                    Log.e("Handler","Read: "+readMessage);
+                    break;
+            }
+        }
+    };
 
     private class ListenerOnTouch implements View.OnTouchListener{
         float dx,dy;
