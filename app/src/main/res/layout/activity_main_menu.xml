@@ -28,7 +28,7 @@
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Configuración"
+        android:text="Creditos"
         android:drawableLeft="@android:drawable/ic_menu_manage"
         android:id="@+id/btn_config"
         android:background="@drawable/buttonselect"

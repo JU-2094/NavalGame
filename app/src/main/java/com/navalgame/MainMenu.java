@@ -1,6 +1,7 @@
 package com.navalgame;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -51,6 +52,17 @@ public class MainMenu extends Activity {
             @Override
             public void onClick(View view) {
                 mp.start();
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainMenu.this);
+
+                builder.setMessage("\nCANSECO SANCHEZ HECTOR MIGUEL" +
+                        "GARCIA CAMACHO LUIS ANGEL\n" +
+                        "HUERTA QUINTERO RAFAEL\n" +
+                        "MOLINA ALBA VICTOR")
+                        .setTitle("Integrantes");
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
             }
         });
 
