@@ -2,10 +2,12 @@ package com.navalgame;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
@@ -36,6 +38,9 @@ public class Game extends Activity {
     private StringBuffer mOutStringBuffer;
     private BluetoothUtil bluetoothManager;
     private BluetoothAdapter mBluetoothAdapter = null;
+    public boolean isConnected = false;
+
+    int [] p_boatL,p_boatM,p_boatS1,p_boatS2,p_boatU1,p_boatU2,p_boatU3;
 
 
     @Override
@@ -56,6 +61,14 @@ public class Game extends Activity {
         boatU1 = (ImageView)findViewById(R.id.unit_boat1);
         boatU2 = (ImageView)findViewById(R.id.unit_boat2);
         boatU3 = (ImageView)findViewById(R.id.unit_boat3);
+
+        p_boatL = new int[2];
+        p_boatM = new int[2];
+        p_boatS1 = new int[2];
+        p_boatS2 = new int[2];
+        p_boatU1 = new int[2];
+        p_boatU2 = new int[2];
+        p_boatU3 = new int[2];
 
         boatL.setTag("boatL");
         boatL.setOnTouchListener(new ListenerOnTouch());
@@ -117,7 +130,7 @@ public class Game extends Activity {
 
                         bluetoothManager.connect(bluetoothManager.getDevice(devName));
 
-
+                        new Connect().execute();
                     }
                 });
 
@@ -176,10 +189,54 @@ public class Game extends Activity {
                     // construct a string from the valid bytes in the buffer
                     String readMessage = new String(readBuf, 0, msg.arg1);
                     Log.e("Handler","Read: "+readMessage);
+
+                    if(readMessage.equals("Game"))
+                        isConnected=true;
                     break;
             }
         }
     };
+
+    private class Connect extends AsyncTask<Void,Void,Void>{
+
+        ProgressDialog progressDialog;
+        @Override
+        protected void onPreExecute() {
+//            super.onPreExecute();
+            progressDialog = new ProgressDialog(Game.this);
+            progressDialog.setMessage("Connectando");
+            progressDialog.show();
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+
+            while(!isConnected){
+                sendMessage("Game");
+            }
+            return null;
+        }
+
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+//            super.onPostExecute(aVoid);
+            progressDialog.dismiss();
+            Intent intent = new Intent(Game.this,PlayGame.class);
+
+
+            intent.putExtra("boatL",p_boatL);
+            intent.putExtra("boatM",p_boatM);
+            intent.putExtra("boatS1",p_boatS1);
+            intent.putExtra("boatS2",p_boatS2);
+            intent.putExtra("boatU1",p_boatU1);
+            intent.putExtra("boatU2",p_boatU2);
+            intent.putExtra("boatU3",p_boatU3);
+
+            startActivity(intent);
+        }
+
+    }
 
     private class ListenerOnTouch implements View.OnTouchListener{
         float dx,dy;
@@ -210,7 +267,7 @@ public class Game extends Activity {
                     }
                     v.animate()
                             .x(v.getX())
-                            .y(getposition(v.getY(),1,v.getTag().toString()))
+                            .y(getposition(v.getY(),1,v.getTag().toString(),v))
                             .setDuration(0)
                             .start();
                     adjust(v,event.getRawX()+dx,event.getRawY()+dy);
@@ -220,7 +277,7 @@ public class Game extends Activity {
                     isclick=false;
 
                     v.animate()
-                            .x(getposition(event.getRawX()+dx,0,v.getTag().toString()))
+                            .x(getposition(event.getRawX()+dx,0,v.getTag().toString(),v))
                             .y(event.getRawY()+dy)
                             .setDuration(0)
                             .start();
@@ -232,7 +289,7 @@ public class Game extends Activity {
             return true;
         }
 
-        private float getposition(float val,int type,String tag){
+        private float getposition(float val,int type,String tag,View v){
 
             float res=0;
 
@@ -247,6 +304,20 @@ public class Game extends Activity {
                     if (indexX<0)
                         indexX=0;
                     res = indexX*xUnit;
+
+
+                    if(v.equals(findViewById(R.id.small_boat1))){
+                        p_boatS1[0]=indexX;
+                    }else if(v.equals(findViewById(R.id.small_boat2))){
+                        p_boatS2[0]=indexX;
+                    }else if(v.equals(findViewById(R.id.unit_boat1))){
+                        p_boatU1[0]=indexX;
+                    }else if(v.equals(findViewById(R.id.unit_boat2))){
+                        p_boatU2[0]=indexX;
+                    }else if(v.equals(findViewById(R.id.unit_boat3))){
+                        p_boatU3[0]=indexX;
+                    }
+
                     break;
 
                 case 1:
@@ -305,6 +376,13 @@ public class Game extends Activity {
                             if(indexY>17)
                                 indexY=17;
 
+                            if(v.equals(findViewById(R.id.small_boat1))){
+                                p_boatS1[1]=indexY;
+                            }else if(v.equals(findViewById(R.id.small_boat2))){
+                                p_boatS2[1]=indexY;
+                            }
+
+
                             break;
                         default:
                             indexY = (int) ((Math.abs(val) + yUnit*0.4)/yUnit);
@@ -312,6 +390,14 @@ public class Game extends Activity {
                                 indexY = 0;
                             if (indexY>9)
                                 indexY = 9;
+                            if(v.equals(findViewById(R.id.unit_boat1))){
+                                p_boatU1[1]=indexY;
+                            }else if(v.equals(findViewById(R.id.unit_boat2))){
+                                p_boatU2[1]=indexY;
+                            }else if(v.equals(findViewById(R.id.unit_boat3))){
+                                p_boatU3[1]=indexY;
+                            }
+
 
                     }
 
@@ -348,12 +434,16 @@ public class Game extends Activity {
                         }else if(index==-27){
                             adjustY += 5*yUnit;
                         }
+
+                        p_boatL[1] = index;
                     }else{
                         index = (int) (v.getX()/xUnit);
                         if(index==0)
                             adjustX += xUnit;
                         else if(index==9)
                             adjustX -= xUnit;
+
+                        p_boatL[0] = index;
                     }
                     break;
 
@@ -365,12 +455,16 @@ public class Game extends Activity {
                             adjustY -= yUnit;
                         }else if(index==13)
                             adjustY += yUnit;
+
+                        p_boatM[1] = index;
                     }else{
                         index = (int) (v.getX()/xUnit);
                         if(index==0)
                             adjustX += xUnit;
                         else if(index==9)
                             adjustX -= xUnit;
+
+                        p_boatM[0] = index;
                     }
                     break;
 
