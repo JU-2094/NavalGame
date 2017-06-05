@@ -16,9 +16,6 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.Set;
 
-/**
- * Created by urb on 4/06/17.
- */
 
 public class BluetoothUtil {
     private final BluetoothAdapter bluetoothAdapter;
