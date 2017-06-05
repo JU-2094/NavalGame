@@ -245,7 +245,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -253,7 +253,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -261,7 +261,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -269,7 +269,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -277,7 +277,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -285,7 +285,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -293,7 +293,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -301,7 +301,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -309,7 +309,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -317,7 +317,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                     </LinearLayout>
@@ -334,7 +334,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -342,7 +342,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -350,7 +350,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -358,7 +358,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -366,7 +366,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -374,7 +374,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -382,7 +382,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -390,7 +390,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -398,7 +398,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -406,24 +406,24 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                    android:orientation="vertical"
-                    android:weightSum="10"
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                        android:orientation="vertical"
+                        android:weightSum="10"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
                         <ImageView
                             android:id="@+id/C1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -431,7 +431,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -439,7 +439,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -447,7 +447,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -455,7 +455,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -463,7 +463,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -471,7 +471,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -479,7 +479,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -487,7 +487,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -495,10 +495,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
-                </LinearLayout>
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -512,7 +512,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -520,7 +520,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -528,7 +528,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -536,7 +536,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -544,7 +544,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -552,7 +552,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -560,7 +560,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -568,7 +568,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -576,7 +576,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -584,7 +584,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                     </LinearLayout>
@@ -600,7 +600,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -608,7 +608,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -616,7 +616,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -624,7 +624,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -632,7 +632,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -640,7 +640,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -648,7 +648,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -656,7 +656,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -664,7 +664,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -672,7 +672,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                     </LinearLayout>
@@ -688,7 +688,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -696,7 +696,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -704,7 +704,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -712,7 +712,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -720,7 +720,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -728,7 +728,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -736,7 +736,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -744,7 +744,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -752,7 +752,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -760,7 +760,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                     </LinearLayout>
@@ -776,7 +776,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -784,7 +784,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -792,7 +792,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -800,7 +800,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -808,7 +808,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -816,7 +816,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -824,7 +824,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -832,7 +832,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -840,7 +840,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -848,7 +848,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                     </LinearLayout>
@@ -864,7 +864,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -872,7 +872,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -880,7 +880,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -888,7 +888,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -896,7 +896,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -904,7 +904,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -912,7 +912,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -920,7 +920,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -928,7 +928,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -936,7 +936,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                     </LinearLayout>
@@ -952,7 +952,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -960,7 +960,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -968,7 +968,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -976,7 +976,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -984,7 +984,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -992,7 +992,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -1000,7 +1000,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -1008,7 +1008,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -1016,7 +1016,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -1024,7 +1024,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                     </LinearLayout>
@@ -1040,7 +1040,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -1048,7 +1048,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -1056,7 +1056,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -1064,7 +1064,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -1072,7 +1072,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -1080,7 +1080,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -1088,7 +1088,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -1096,7 +1096,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -1104,7 +1104,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                         <ImageView
@@ -1112,7 +1112,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:alpha="0.5"
+                            android:alpha="0.0"
                             android:src="@android:drawable/alert_light_frame" />
 
                     </LinearLayout>
