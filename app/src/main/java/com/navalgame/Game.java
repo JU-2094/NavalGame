@@ -185,7 +185,8 @@ public class Game extends Activity {
     private void sendMessage(String message) {
         // Check that we're actually connected before trying anything
         if (bluetoothManager.getState() != BluetoothUtil.STATE_CONNECTED) {
-            Toast.makeText(this, "not connected", Toast.LENGTH_SHORT).show();
+            Log.e("--------","NOT  CONNECTED");
+            //Toast.makeText(this, "not connected", Toast.LENGTH_SHORT).show();
             return;
         }
         // Check that there's actually something to send
